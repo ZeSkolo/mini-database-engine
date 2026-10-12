@@ -1,0 +1,38 @@
+{
+  "repo": "mini-database-engine",
+  "title": "MiniDB workspace",
+  "subtitle": "A clear view into SQL, pages and your database engine.",
+  "tools": [
+    {
+      "id": "database",
+      "kind": "database",
+      "title": "SQL workspace",
+      "description": "Query the original slotted-page and B+ tree engine. One statement per request.",
+      "actions": [
+        {
+          "id": "execute",
+          "label": "Run SQL",
+          "fields": [
+            {
+              "key": "sql",
+              "label": "SQL statement",
+              "type": "textarea",
+              "value": "CREATE TABLE users (id INT, name TEXT, score INT);",
+              "hint": "Next: INSERT INTO users VALUES (1, 'Ada', 10); then SELECT * FROM users;"
+            }
+          ],
+          "note": "CREATE, INSERT, DELETE and DROP change your local UI database."
+        },
+        {
+          "id": "stats",
+          "label": "Storage stats",
+          "fields": []
+        }
+      ],
+      "base": "."
+    }
+  ],
+  "previews": [],
+  "runtime": "Local-only backend \u00b7 Python standard library \u00b7 UI data stored separately in .web-data",
+  "port": 8100
+}
